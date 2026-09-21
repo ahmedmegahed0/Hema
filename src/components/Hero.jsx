@@ -36,7 +36,7 @@ const Hero = ({ onEnter }) => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
             className="fixed inset-0 flex flex-col items-center justify-center z-[9999]"
-            style={{ background: '#050505' }}
+            style={{ background: '#F2ECD9' }}
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -60,12 +60,12 @@ const Hero = ({ onEnter }) => {
                 </div>
               </div>
               <motion.p
-                animate={{ opacity: [0.5, 1, 0.5] }}
+                animate={{ opacity: [0.7, 1, 0.7] }}
                 transition={{ duration: 2, repeat: Infinity }}
-                className="text-lg mb-6 tracking-widest"
-                style={{ color: '#C9A84C', fontFamily: "'Cormorant Garamond', serif", letterSpacing: '0.2em' }}
+                className="text-xl sm:text-2xl mb-6 tracking-widest font-medium"
+                style={{ color: '#8B6914', fontFamily: "'Amiri', serif", letterSpacing: '0.2em' }}
               >
-                Ibrahim & Layla
+                إبراهيم وليلى
               </motion.p>
               <div className="w-48 h-px mx-auto overflow-hidden" style={{ background: 'rgba(201,168,76,0.2)' }}>
                 <motion.div
@@ -87,10 +87,10 @@ const Hero = ({ onEnter }) => {
                   >
                     <button
                       onClick={handleStart}
-                      className="btn-gold text-sm tracking-widest px-8 py-3 uppercase"
-                      style={{ boxShadow: '0 0 30px rgba(201,168,76,0.2)' }}
+                      className="btn-gold text-base tracking-widest px-10 py-4 uppercase font-bold"
+                      style={{ boxShadow: '0 0 30px rgba(201,168,76,0.3)' }}
                     >
-                      Enter Website
+                      يلا نبدأ
                     </button>
                   </motion.div>
                 )}
@@ -104,7 +104,7 @@ const Hero = ({ onEnter }) => {
       <section
         id="home"
         className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
-        style={{ background: 'linear-gradient(180deg, #030203 0%, #0A0604 40%, #080808 100%)' }}
+        style={{ background: 'linear-gradient(180deg, #F2ECD9 0%, #E8DFCA 100%)' }}
       >
         {/* Stars */}
         <div className="absolute inset-0 overflow-hidden" style={{ zIndex: 1 }}>
@@ -115,7 +115,7 @@ const Hero = ({ onEnter }) => {
               style={{
                 left: `${s.x}%`, top: `${s.y}%`,
                 width: `${s.size}px`, height: `${s.size}px`,
-                background: 'rgba(255, 240, 180, 0.9)',
+                background: 'rgba(201, 168, 76, 0.6)',
               }}
               animate={{ opacity: [0.2, 1, 0.2] }}
               transition={{ duration: s.duration, repeat: Infinity, delay: s.delay }}
@@ -184,8 +184,8 @@ const Hero = ({ onEnter }) => {
                 className="flex items-center justify-center gap-4 mb-8"
               >
                 <div className="h-px w-16 sm:w-24" style={{ background: 'linear-gradient(90deg, transparent, #C9A84C)' }} />
-                <span className="text-xs sm:text-sm tracking-[0.3em] uppercase" style={{ color: 'rgba(201,168,76,0.8)' }}>
-                  Wedding Invitation
+                <span className="text-sm sm:text-base font-semibold tracking-[0.3em] uppercase" style={{ color: '#8B6914' }}>
+                  دعوة فرحنا
                 </span>
                 <div className="h-px w-16 sm:w-24" style={{ background: 'linear-gradient(90deg, #C9A84C, transparent)' }} />
               </motion.div>
@@ -198,16 +198,15 @@ const Hero = ({ onEnter }) => {
                 className="mb-8 relative"
               >
                 <h1
-                  className="leading-none"
+                  className="leading-tight py-4"
                   style={{
-                    fontFamily: "'Cormorant Garamond', serif",
+                    fontFamily: "'Amiri', serif",
                     fontSize: 'clamp(4rem, 14vw, 10rem)',
-                    fontWeight: 300,
-                    background: 'linear-gradient(135deg, #8B6914 0%, #C9A84C 25%, #F0D98C 50%, #C9A84C 75%, #8B6914 100%)',
+                    fontWeight: 500,
+                    background: 'linear-gradient(135deg, #5C4409 0%, #8B6914 25%, #C9A84C 50%, #8B6914 75%, #5C4409 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
-                    filter: 'drop-shadow(0 0 30px rgba(201,168,76,0.4))',
                     letterSpacing: '-0.01em',
                   }}
                 >
@@ -226,11 +225,11 @@ const Hero = ({ onEnter }) => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.9 }}
                 className="inline-flex flex-wrap items-center justify-center gap-4 px-6 sm:px-8 py-3 mb-8 rounded-full"
-                style={{ border: '1px solid rgba(201,168,76,0.3)', background: 'rgba(201,168,76,0.05)' }}
+                style={{ border: '1px solid rgba(201,168,76,0.4)', background: 'rgba(201,168,76,0.05)' }}
               >
-                <span className="text-sm" style={{ color: 'rgba(247,231,206,0.7)' }}>{weddingData.event.dateFormatted}</span>
-                <span style={{ color: 'rgba(201,168,76,0.4)' }}>◆</span>
-                <span className="text-sm" style={{ color: 'rgba(247,231,206,0.7)' }}>{weddingData.event.venue}</span>
+                <span className="text-base font-medium" style={{ color: '#2C2C2C' }}>{weddingData.event.dateFormatted}</span>
+                <span style={{ color: 'rgba(201,168,76,0.8)' }}>◆</span>
+                <span className="text-base font-medium" style={{ color: '#2C2C2C' }}>{weddingData.event.venue}</span>
               </motion.div>
 
               {/* Tagline */}
@@ -238,10 +237,10 @@ const Hero = ({ onEnter }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1.1 }}
-                className="text-base sm:text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed"
-                style={{ fontFamily: "'Cormorant Garamond', serif", color: 'rgba(247,231,206,0.6)', fontStyle: 'italic', fontSize: 'clamp(1rem, 2.5vw, 1.3rem)' }}
+                className="text-lg sm:text-xl md:text-2xl mb-12 max-w-2xl mx-auto leading-relaxed"
+                style={{ fontFamily: "'Amiri', serif", color: '#1A1A1A', fontStyle: 'italic', fontWeight: 500, fontSize: 'clamp(1.2rem, 3vw, 1.6rem)' }}
               >
-                "On a night God wrote the beginning of the most beautiful story of our lives..."
+                "في ليلة ربنا كتب فيها بداية أجمل حكاية في حياتنا..."
               </motion.p>
             </motion.div>
           )}
@@ -257,7 +256,7 @@ const Hero = ({ onEnter }) => {
               className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
               style={{ zIndex: 10 }}
             >
-              <span className="text-xs tracking-widest uppercase" style={{ color: 'rgba(201,168,76,0.45)' }}>Scroll Down</span>
+              <span className="text-xs sm:text-sm tracking-widest uppercase font-semibold" style={{ color: '#8B6914' }}>انزل تحت</span>
               <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                   <path d="M5 8L10 13L15 8" stroke="#C9A84C" strokeWidth="1.5" strokeLinecap="round" opacity="0.5" />

@@ -18,8 +18,8 @@ const FilmFrame = ({ img, size = 'md' }) => {
       style={{
         ...dims,
         borderRadius: '4px',
-        border: '3px solid #1a1408',
-        outline: '1px solid rgba(201,168,76,0.25)',
+        border: '3px solid #FFFFFF',
+        outline: '1px solid rgba(201,168,76,0.4)',
         flexShrink: 0,
       }}
     >
@@ -27,7 +27,7 @@ const FilmFrame = ({ img, size = 'md' }) => {
         src={img.placeholder}
         alt={img.alt}
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-        style={{ filter: 'sepia(0.2) contrast(1.1)' }}
+        style={{ filter: 'sepia(0.1) contrast(1.05)' }}
         loading="lazy"
       />
       {/* vignette */}
@@ -45,10 +45,10 @@ const FilmFrame = ({ img, size = 'md' }) => {
       />
       {/* caption on hover */}
       <div
-        className="absolute bottom-0 left-0 right-0 py-2 px-3 text-xs text-center font-cairo opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        className="absolute bottom-0 left-0 right-0 py-2 px-3 text-xs text-center font-cairo opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium"
         style={{
-          background: 'linear-gradient(0deg, rgba(8,6,2,0.9), transparent)',
-          color: '#C9A84C',
+          background: 'linear-gradient(0deg, rgba(255,255,255,0.95), transparent)',
+          color: '#8B6914',
         }}
       >
         {img.alt}
@@ -61,7 +61,7 @@ const FilmFrame = ({ img, size = 'md' }) => {
 const Perforations = () => (
   <div
     className="flex items-center gap-3 px-2 py-1"
-    style={{ background: '#0A0804', overflow: 'hidden' }}
+    style={{ background: '#EBE5D9', overflow: 'hidden' }}
   >
     {Array.from({ length: 80 }).map((_, i) => (
       <div
@@ -70,8 +70,8 @@ const Perforations = () => (
         style={{
           width: '22px',
           height: '12px',
-          background: '#18120A',
-          border: '1px solid rgba(0,0,0,0.7)',
+          background: '#FDFBF7',
+          border: '1px solid rgba(201,168,76,0.2)',
           flexShrink: 0,
         }}
       />
@@ -83,7 +83,7 @@ const MemoryFilm = () => {
   return (
     <section
       className="relative py-20 overflow-hidden"
-      style={{ background: '#040302' }}
+      style={{ background: '#F2ECD9' }}
     >
       {/* ── header ── */}
       <motion.div
@@ -94,16 +94,16 @@ const MemoryFilm = () => {
         className="text-center mb-10 relative z-10"
       >
         <p
-          className="font-cairo text-xs uppercase tracking-widest mb-2"
-          style={{ color: 'rgba(201,168,76,0.6)' }}
+          className="font-cairo text-sm uppercase tracking-widest mb-2"
+          style={{ color: '#8B6914', fontWeight: 700 }}
         >
-          ✦ Memory Film ✦
+          ✦ شريط الذكريات ✦
         </p>
         <h2
           className="font-amiri"
           style={{
             fontSize: 'clamp(1.6rem, 4vw, 2.8rem)',
-            fontFamily: "'Cormorant Garamond', serif",
+            fontFamily: "'Amiri', serif",
             fontWeight: 300,
             background: 'linear-gradient(135deg, #C9A84C, #F0D98C, #C9A84C)',
             WebkitBackgroundClip: 'text',
@@ -111,7 +111,7 @@ const MemoryFilm = () => {
             backgroundClip: 'text',
           }}
         >
-          Our Memories on the Silver Screen
+          ذكرياتنا على شريط السينما
         </h2>
       </motion.div>
 
@@ -121,7 +121,7 @@ const MemoryFilm = () => {
 
         {/* ROW 1 — moves RIGHT → LEFT */}
         <div
-          style={{ background: '#0A0804', overflow: 'hidden', padding: '12px 0' }}
+          style={{ background: '#EBE5D9', overflow: 'hidden', padding: '12px 0' }}
         >
           <motion.div
             className="flex gap-4 items-center"
@@ -137,7 +137,7 @@ const MemoryFilm = () => {
 
         {/* ROW 2 — moves LEFT → RIGHT (opposite) */}
         <div
-          style={{ background: '#0A0804', overflow: 'hidden', padding: '12px 0' }}
+          style={{ background: '#EBE5D9', overflow: 'hidden', padding: '12px 0' }}
         >
           <motion.div
             className="flex gap-4 items-center"
@@ -156,11 +156,11 @@ const MemoryFilm = () => {
         {/* side fade gradients */}
         <div
           className="absolute inset-y-0 right-0 w-20 pointer-events-none z-10"
-          style={{ background: 'linear-gradient(270deg, #040302, transparent)' }}
+          style={{ background: 'linear-gradient(270deg, #F2ECD9, transparent)' }}
         />
         <div
           className="absolute inset-y-0 left-0 w-20 pointer-events-none z-10"
-          style={{ background: 'linear-gradient(90deg, #040302, transparent)' }}
+          style={{ background: 'linear-gradient(90deg, #F2ECD9, transparent)' }}
         />
       </div>
     </section>

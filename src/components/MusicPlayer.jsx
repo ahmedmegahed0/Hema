@@ -42,10 +42,10 @@ const MusicPlayer = ({ musicStarted }) => {
 
   // Fallback for explicit enter button
   useEffect(() => {
-    if (musicStarted && audioRef.current && !playing) {
+    if (musicStarted && audioRef.current) {
       audioRef.current.play().then(() => setPlaying(true)).catch(() => setError(true));
     }
-  }, [musicStarted, playing]);
+  }, [musicStarted]);
 
   const toggle = () => {
     if (!audioRef.current) return;
@@ -66,7 +66,7 @@ const MusicPlayer = ({ musicStarted }) => {
         onClick={toggle}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        title={playing ? 'Pause Music' : 'Play Music'}
+        title={playing ? 'وقف الموسيقى' : 'شغل الموسيقى'}
         className="relative w-14 h-14 rounded-full flex items-center justify-center cursor-pointer"
         style={{
           background: 'linear-gradient(135deg, #C9A84C, #F0D98C)',
@@ -96,7 +96,7 @@ const MusicPlayer = ({ musicStarted }) => {
 
       <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap text-xs px-2 py-1 rounded-full pointer-events-none"
         style={{ background: 'rgba(12,9,4,0.9)', color: '#C9A84C', border: '1px solid rgba(201,168,76,0.2)' }}>
-        {playing ? 'Pause ⏸' : 'Play ▶'}
+        {playing ? 'وقف ⏸' : 'شغل ▶'}
       </div>
     </motion.div>
   );

@@ -10,91 +10,91 @@ import img7 from '../assets/7.jpeg';
 import img8 from '../assets/8.jpeg';
 import logoImg from '../assets/logo.jpeg';
 export const weddingData = {
-  groom: 'Ibrahim',
-  bride: 'Layla',
-  coupleNames: 'Ibrahim & Layla',
+  groom: 'إبراهيم',
+  bride: 'ليلى',
+  coupleNames: 'إبراهيم وليلى',
 
   event: {
     date: new Date('2026-09-30T21:00:00'),
-    dateFormatted: 'Wednesday, September 30th 2026',
-    time: '9:00 PM',
-    venue: 'Solitaire Hall — Menouf, Menoufia',
+    dateFormatted: 'الأربعاء، 30 سبتمبر 2026',
+    time: '9:00 مساءً',
+    venue: 'قاعة سوليتاير — منوف، المنوفية',
     mapsUrl: 'https://maps.app.goo.gl/nDWtRY7esALqASew5',
   },
 
   hennaEvent: {
-    dateFormatted: 'Friday, September 25th',
+    dateFormatted: 'الجمعة، 25 سبتمبر',
     venue: 'عزبة السلخانة القديمة',
   },
 
   story: {
-    title: 'Our Story Began Here...',
-    subtitle: 'Among thousands of paths that could have brought us together, God chose one — and that made all the difference.',
-    description: 'A love story written by fate long before we were born. God brought us together at the right moment, in the right place — to begin the most beautiful chapter of our lives.',
+    title: 'حكايتنا بدأت هنا...',
+    subtitle: 'من بين ألف طريق كان ممكن يجمعنا، ربنا اختار طريق واحد — وده اللي فرق في حياتنا كلها.',
+    description: 'قصة حب مكتوبة من قبل ما نتولد. ربنا جمعنا في الوقت الصح والمكان الصح — عشان نبدأ أجمل حكاية في حياتنا.',
     image: logoImg,
     milestones: [
       {
         emoji: '💫',
-        title: 'First Meeting',
+        title: 'أول مرة نتقابل',
         date: '2023',
-        description: 'We met for the first time — not knowing that this encounter would change the course of our lives forever.',
+        description: 'اتقابلنا لأول مرة — ومكناش نعرف إن الصدفة دي هتغير حياتنا كلها.',
       },
       {
         emoji: '💍',
-        title: 'First Date',
+        title: 'أول خروجة',
         date: '2023',
-        description: 'We spent hours talking as if we had known each other for years. Something beautiful was beginning.',
+        description: 'قعدنا نتكلم ساعات كأننا نعرف بعض من سنين. كان في حاجة حلوة بتبدأ.',
       },
       {
         emoji: '❤️',
-        title: 'The Engagement',
+        title: 'الخطوبة',
         date: '2024',
-        description: 'In a moment we will never forget, the heart decided what words could not say.',
+        description: 'في لحظة عمرنا ما هننساها، القلب قال اللي الكلام مقدرش يوصفه.',
       },
       {
         emoji: '✨',
-        title: 'Wedding Night',
+        title: 'ليلة الفرح',
         date: '2026',
-        description: 'And here we are — standing at the door of the most beautiful day of our lives. We want you by our side.',
+        description: 'وأدينا هنا — واقفين على باب أجمل يوم في حياتنا. ونفسنا تكونوا معانا.',
       },
     ],
   },
 
   gallery: [
-    { id: 1, alt: 'Engagement Moment',    placeholder: img1, featured: true },
-    { id: 2, alt: 'Together Always',      placeholder: img2 },
-    { id: 3, alt: 'Joyful Moments',       placeholder: img3 },
-    { id: 4, alt: 'A Love Story',         placeholder: img4 },
-    { id: 5, alt: 'Royal Wedding',        placeholder: img5 },
-    { id: 6, alt: 'Night of a Lifetime',  placeholder: img6 },
-    { id: 7, alt: 'Beautiful Memories',   placeholder: img7 },
-    { id: 8, alt: 'Forever and Always',   placeholder: img8 },
-    { id: 9, alt: 'Our Special Day',      placeholder: logoImg },
+    { id: 1, alt: 'لحظة الخطوبة',    placeholder: img1, featured: true },
+    { id: 2, alt: 'مع بعض دايماً',      placeholder: img2 },
+    { id: 3, alt: 'لحظات حلوة',       placeholder: img3 },
+    { id: 4, alt: 'قصة حب',         placeholder: img4 },
+    { id: 5, alt: 'فرحة العمر',        placeholder: img5 },
+    { id: 6, alt: 'ليلة العمر',  placeholder: img6 },
+    { id: 7, alt: 'ذكريات جميلة',   placeholder: img7 },
+    { id: 8, alt: 'لحد آخر العمر',   placeholder: img8 },
+    { id: 9, alt: 'يومنا المميز',      placeholder: logoImg },
   ],
 
   initialMessages: [
     {
       id: 1,
-      name: 'Um Kareem',
-      message: 'Congratulations to the beautiful couple! May God bless you with happiness and love forever ❤️',
+      name: 'أم كريم',
+      message: 'ألف مبروك يا عرسان! ربنا يسعدكم ويهنيكم وتفضلوا مع بعض طول العمر ❤️',
       date: '2026-09-20',
     },
     {
       id: 2,
-      name: 'Mohamed & Family',
-      message: 'Wishing you a lifetime filled with joy, laughter, and endless love. Mabrook! 🌹',
+      name: 'محمد والعيلة',
+      message: 'ربنا يجعل أيامكم كلها فرح وضحك وحب مبيخلصش. ألف مبروك يا غاليين! 🌹',
       date: '2026-09-21',
     },
     {
       id: 3,
-      name: 'Sarah',
-      message: 'One of the most beautiful weddings! Congratulations Ibrahim & Layla ✨💍',
+      name: 'سارة',
+      message: 'من أحلى الأفراح اللي شفتها! ألف مبروك إبراهيم وليلى ✨💍',
       date: '2026-09-22',
     },
   ],
 
   music: {
     src: songAsset,
-    title: 'Wedding Music',
+    title: 'أغنية الفرح',
   },
 };

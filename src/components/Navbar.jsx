@@ -53,10 +53,11 @@ const Navbar = () => {
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
         style={{
           background: scrolled
-            ? 'rgba(8, 8, 8, 0.85)'
+            ? 'rgba(242, 236, 217, 0.95)'
             : 'transparent',
           backdropFilter: scrolled ? 'blur(20px)' : 'none',
-          borderBottom: scrolled ? '1px solid rgba(201, 168, 76, 0.2)' : 'none',
+          borderBottom: scrolled ? '1px solid rgba(201, 168, 76, 0.3)' : 'none',
+          boxShadow: scrolled ? '0 4px 30px rgba(0, 0, 0, 0.05)' : 'none',
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -67,7 +68,7 @@ const Navbar = () => {
               className="font-amiri text-lg sm:text-xl font-bold cursor-pointer"
               style={{ color: '#C9A84C' }}
             >
-              أحمد & نورهان
+              إبراهيم وليلى
             </button>
 
             {/* Desktop Nav */}
@@ -76,9 +77,9 @@ const Navbar = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollTo(item.id)}
-                  className="text-sm font-cairo font-medium transition-all duration-300 relative cursor-pointer"
+                  className="text-base font-cairo font-semibold transition-all duration-300 relative cursor-pointer"
                   style={{
-                    color: activeSection === item.id ? '#C9A84C' : 'rgba(247, 231, 206, 0.7)',
+                    color: activeSection === item.id ? '#8B6914' : '#2C2C2C',
                   }}
                 >
                   {item.label}
@@ -129,9 +130,10 @@ const Navbar = () => {
             transition={{ duration: 0.4, ease: 'easeOut' }}
             className="fixed top-0 right-0 bottom-0 w-72 z-50 flex flex-col pt-24 pb-8 px-8"
             style={{
-              background: 'rgba(8, 6, 2, 0.97)',
+              background: 'rgba(242, 236, 217, 0.98)',
               backdropFilter: 'blur(30px)',
-              borderLeft: '1px solid rgba(201, 168, 76, 0.2)',
+              borderLeft: '1px solid rgba(201, 168, 76, 0.3)',
+              boxShadow: '-10px 0 30px rgba(0,0,0,0.05)',
             }}
           >
             <button
@@ -143,7 +145,7 @@ const Navbar = () => {
             </button>
 
             <div className="font-amiri text-xl mb-8" style={{ color: '#C9A84C' }}>
-              أحمد & نورهان
+              إبراهيم وليلى
             </div>
 
             <div className="flex flex-col gap-1">
@@ -154,10 +156,10 @@ const Navbar = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.06 }}
                   onClick={() => scrollTo(item.id)}
-                  className="text-right py-4 text-base font-cairo font-medium border-b cursor-pointer transition-colors duration-200"
+                  className="text-right py-4 text-lg font-cairo font-semibold border-b cursor-pointer transition-colors duration-200"
                   style={{
-                    color: activeSection === item.id ? '#C9A84C' : 'rgba(247, 231, 206, 0.7)',
-                    borderColor: 'rgba(201, 168, 76, 0.1)',
+                    color: activeSection === item.id ? '#8B6914' : '#2C2C2C',
+                    borderColor: 'rgba(201, 168, 76, 0.2)',
                   }}
                 >
                   {item.label}
@@ -177,7 +179,7 @@ const Navbar = () => {
             exit={{ opacity: 0 }}
             onClick={() => setMenuOpen(false)}
             className="fixed inset-0 z-40 lg:hidden"
-            style={{ background: 'rgba(0,0,0,0.5)' }}
+            style={{ background: 'rgba(255,255,255,0.4)', backdropFilter: 'blur(4px)' }}
           />
         )}
       </AnimatePresence>

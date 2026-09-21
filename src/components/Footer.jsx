@@ -5,7 +5,7 @@ import { weddingData } from '../data/weddingData';
 const Footer = () => (
   <footer
     className="relative py-24 overflow-hidden"
-    style={{ background: 'linear-gradient(180deg, #080808 0%, #040302 100%)', borderTop: '1px solid rgba(201,168,76,0.1)' }}
+    style={{ background: 'linear-gradient(180deg, #F2ECD9 0%, #E8DFCA 100%)', borderTop: '1px solid rgba(201,168,76,0.2)' }}
   >
     <div className="absolute inset-0"
       style={{ background: 'radial-gradient(ellipse at 50% 100%, rgba(201,168,76,0.04) 0%, transparent 70%)' }} />
@@ -21,7 +21,7 @@ const Footer = () => (
       >
         <div className="h-px flex-1" style={{ background: 'linear-gradient(90deg, transparent, rgba(201,168,76,0.4))' }} />
         <span className="text-xl" style={{ color: '#C9A84C' }}>✦</span>
-        <span className="text-xs uppercase tracking-[0.3em]" style={{ color: 'rgba(201,168,76,0.5)' }}>Royal Wedding</span>
+        <span className="text-xs uppercase tracking-[0.3em]" style={{ color: 'rgba(201,168,76,0.5)' }}>أجمل ليلة في العمر</span>
         <span className="text-xl" style={{ color: '#C9A84C' }}>✦</span>
         <div className="h-px flex-1" style={{ background: 'linear-gradient(90deg, rgba(201,168,76,0.4), transparent)' }} />
       </motion.div>
@@ -34,14 +34,13 @@ const Footer = () => (
         transition={{ duration: 0.9 }}
         className="mb-5"
         style={{
-          fontFamily: "'Cormorant Garamond', serif",
+          fontFamily: "'Amiri', serif",
           fontSize: 'clamp(2.5rem, 8vw, 5rem)',
           fontWeight: 300,
           background: 'linear-gradient(135deg, #8B6914 0%, #C9A84C 30%, #F0D98C 50%, #C9A84C 70%, #8B6914 100%)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
           backgroundClip: 'text',
-          filter: 'drop-shadow(0 0 20px rgba(201,168,76,0.3))',
         }}
       >
         {weddingData.coupleNames}
@@ -53,10 +52,10 @@ const Footer = () => (
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.9, delay: 0.2 }}
-        className="mb-10 leading-relaxed"
-        style={{ fontFamily: "'Cormorant Garamond', serif", color: 'rgba(247,231,206,0.55)', fontStyle: 'italic', fontSize: 'clamp(1rem, 2vw, 1.3rem)' }}
+        className="mb-10 leading-relaxed font-medium"
+        style={{ fontFamily: "'Amiri', serif", color: '#2C2C2C', fontStyle: 'italic', fontSize: 'clamp(1.2rem, 3vw, 1.5rem)' }}
       >
-        "Our story has begun — and we want you to be part of it."
+        "حكايتنا بدأت — ونفسنا تبقوا معانا عشان تكمل"
       </motion.p>
 
       {/* Date */}
@@ -68,7 +67,7 @@ const Footer = () => (
         className="inline-flex items-center gap-3 px-6 py-2 rounded-full mb-12"
         style={{ border: '1px solid rgba(201,168,76,0.25)', background: 'rgba(201,168,76,0.04)' }}
       >
-        <span className="text-sm" style={{ color: 'rgba(201,168,76,0.7)' }}>{weddingData.event.dateFormatted}</span>
+        <span className="text-base font-semibold" style={{ color: '#8B6914' }}>{weddingData.event.dateFormatted}</span>
       </motion.div>
 
       {/* Heart & Ad */}
@@ -85,21 +84,21 @@ const Footer = () => (
         <div 
           className="mt-8 p-8 rounded-2xl mx-auto max-w-lg relative group" 
           style={{ 
-            background: 'rgba(20,15,8,0.7)', 
+            background: 'rgba(255, 255, 255, 0.9)', 
             border: '1px solid rgba(201,168,76,0.3)', 
             backdropFilter: 'blur(10px)',
-            boxShadow: '0 10px 30px -10px rgba(201,168,76,0.2)'
+            boxShadow: '0 10px 30px -10px rgba(0,0,0,0.05)'
           }}
         >
           <div className="absolute inset-0 rounded-2xl opacity-50 group-hover:opacity-100 transition-opacity duration-500"
-            style={{ background: 'radial-gradient(circle at 50% 50%, rgba(201,168,76,0.1) 0%, transparent 70%)', pointerEvents: 'none' }} />
+            style={{ background: 'radial-gradient(circle at 50% 50%, rgba(201,168,76,0.05) 0%, transparent 70%)', pointerEvents: 'none' }} />
           
-          <h3 className="text-xl mb-4 font-bold" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#C9A84C' }}>Design Your Own Invitation ✨</h3>
-          <p className="text-sm mb-5 leading-relaxed" style={{ color: 'rgba(247,231,206,0.9)' }} dir="rtl">
+          <h3 className="text-xl mb-4 font-bold" style={{ fontFamily: "'Amiri', serif", color: '#8B6914' }}>اعمل دعوة فرحك زيهم ✨</h3>
+          <p className="text-sm mb-5 leading-relaxed" style={{ color: '#2C2C2C' }} dir="rtl">
             لو عجبك التصميم وعايز تعمل إنفيتيشن زي دي لخطوبتك، فرحك، أو أي مناسبة، تقدر تكلمنا دلوقتي على:
           </p>
           <a href="tel:01067688524" className="text-2xl inline-block font-bold mb-6 hover:scale-105 transition-transform relative z-10" 
-             style={{ color: '#F0D98C', textDecoration: 'none', textShadow: '0 0 15px rgba(201,168,76,0.4)' }}>
+             style={{ color: '#8B6914', textDecoration: 'none', textShadow: '0 0 15px rgba(201,168,76,0.2)' }}>
             01067688524
           </a>
           
@@ -107,13 +106,13 @@ const Footer = () => (
             <a href="https://www.instagram.com/wedcraft_eg/" target="_blank" rel="noreferrer" 
                className="hover:scale-110 transition-transform flex items-center gap-2 text-sm uppercase tracking-widest font-semibold" 
                style={{ color: 'rgba(201,168,76,0.9)' }}>
-              Instagram
+              إنستجرام
             </a>
             <a href="https://www.tiktok.com/@wed.craft?_r=1&_t=ZS-98LpvLW49nJ&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAaea5T8myq-IB4Tmw3gZ1APE0k2qRnGJQHviSwYF2FPbdRkWb1km-l7HvR8HwA_aem_hrCxXVIFlXFkuoN5nNN-Rg" 
                target="_blank" rel="noreferrer" 
                className="hover:scale-110 transition-transform flex items-center gap-2 text-sm uppercase tracking-widest font-semibold" 
                style={{ color: 'rgba(201,168,76,0.9)' }}>
-              TikTok
+              تيك توك
             </a>
           </div>
         </div>

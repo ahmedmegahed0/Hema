@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import FloralCorner from './FloralCorner';
 
 const RSVP_KEY = 'wedding_rsvp_ibrahim_layla';
 
@@ -10,8 +11,8 @@ const RSVP = () => {
 
   const validate = () => {
     const e = {};
-    if (!form.name.trim()) e.name = 'Please enter your name';
-    if (!form.attendance) e.attendance = 'Please let us know if you can attend';
+    if (!form.name.trim()) e.name = 'يا ريت تكتب اسمك';
+    if (!form.attendance) e.attendance = 'عرفنا هتقدر تيجي ولا لأ';
     return e;
   };
 
@@ -50,7 +51,7 @@ const RSVP = () => {
     <section
       id="rsvp"
       className="relative py-28 sm:py-36 overflow-hidden"
-      style={{ background: 'linear-gradient(180deg, #080808 0%, #070503 50%, #080808 100%)' }}
+      style={{ background: 'linear-gradient(180deg, #E8DFCA 0%, #F2ECD9 50%, #E8DFCA 100%)' }}
     >
       <div className="absolute inset-0"
         style={{ background: 'radial-gradient(ellipse at 50% 30%, rgba(201,168,76,0.05) 0%, transparent 70%)' }} />
@@ -64,13 +65,13 @@ const RSVP = () => {
           transition={{ duration: 0.9 }}
           className="text-center mb-16 sm:mb-20"
         >
-          <p className="text-xs uppercase tracking-[0.3em] mb-5" style={{ color: 'rgba(201,168,76,0.7)' }}>
-            ✦ Kindly Reply ✦
+          <p className="text-sm uppercase tracking-[0.3em] mb-5" style={{ color: '#8B6914', fontWeight: 700 }}>
+            ✦ تأكيد الحضور ✦
           </p>
           <h2
             className="mb-5"
             style={{
-              fontFamily: "'Cormorant Garamond', serif",
+              fontFamily: "'Amiri', serif",
               fontSize: 'clamp(2rem, 5vw, 3.2rem)',
               fontWeight: 300,
               background: 'linear-gradient(135deg, #C9A84C, #F0D98C, #C9A84C)',
@@ -79,11 +80,11 @@ const RSVP = () => {
               backgroundClip: 'text',
             }}
           >
-            Will You Join Our Celebration?
+            هتنورونا وتكملوا فرحتنا؟
           </h2>
           <div className="section-divider" />
-          <p className="mt-6" style={{ fontFamily: "'Cormorant Garamond', serif", color: 'rgba(247,231,206,0.65)', fontStyle: 'italic', fontSize: '1.1rem' }}>
-            Your presence is the most precious gift on the night of our lives ❤️
+          <p className="mt-6 font-medium" style={{ fontFamily: "'Amiri', serif", color: '#2C2C2C', fontStyle: 'italic', fontSize: '1.3rem' }}>
+            وجودكم هو أغلى هدية في ليلة عمرنا ❤️
           </p>
         </motion.div>
 
@@ -111,13 +112,13 @@ const RSVP = () => {
                   {form.attendance === 'yes' ? '💍' : '🙏'}
                 </motion.div>
               </motion.div>
-              <h3 className="text-3xl mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#C9A84C' }}>
-                {form.attendance === 'yes' ? "We can't wait to see you!" : 'Thank you for letting us know'}
+              <h3 className="text-3xl mb-4" style={{ fontFamily: "'Amiri', serif", color: '#8B6914' }}>
+                {form.attendance === 'yes' ? "مستنيينكم تنورونا!" : 'شكراً إنكم عرفتونا'}
               </h3>
-              <p className="text-base" style={{ color: 'rgba(247,231,206,0.6)' }}>
+              <p className="text-base" style={{ color: '#4A4A4A' }}>
                 {form.attendance === 'yes'
-                  ? `We look forward to celebrating with you${form.guests > 1 ? ` and your ${parseInt(form.guests) - 1} guest(s)` : ''} ✨`
-                  : 'You will always be in our hearts, even from afar ❤️'}
+                  ? `فرحتنا مش هتكمل غير بيكم${form.guests > 1 ? ` وبكل اللي جايين معاكم (${parseInt(form.guests) - 1})` : ''} ✨`
+                  : 'هتفضلوا في قلوبنا، حتى لو مش هتقدروا تكونوا موجودين ❤️'}
               </p>
               <div className="mt-8 flex items-center justify-center gap-2">
                 {[...Array(5)].map((_, i) => (
@@ -133,17 +134,32 @@ const RSVP = () => {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.7 }}
               onSubmit={handleSubmit}
-              className="p-8 sm:p-10 rounded-3xl"
-              style={{ background: 'rgba(12,9,4,0.8)', border: '1px solid rgba(201,168,76,0.2)', backdropFilter: 'blur(20px)' }}
+              className="p-8 sm:p-10 rounded-3xl relative group overflow-hidden"
+              style={{
+                background: 'linear-gradient(145deg, rgba(255,255,255,0.95) 0%, rgba(245,240,230,0.95) 100%)',
+                border: '1px solid rgba(201,168,76,0.4)',
+                boxShadow: '0 10px 40px -10px rgba(0,0,0,0.05)',
+                backdropFilter: 'blur(20px)',
+              }}
             >
+              {/* Inner decorative frame line */}
+              <div className="absolute inset-3 rounded-2xl border border-dashed border-[#C9A84C]/15 pointer-events-none transition-all duration-500 group-hover:border-[#C9A84C]/30" />
+
+              {/* Floral corners */}
+              <FloralCorner position="top-right" className="opacity-20 group-hover:opacity-60 transition-opacity duration-500" />
+              <FloralCorner position="bottom-left" className="opacity-20 group-hover:opacity-60 transition-opacity duration-500" />
+              <FloralCorner position="top-left" className="opacity-10 group-hover:opacity-40 transition-opacity duration-500" />
+              <FloralCorner position="bottom-right" className="opacity-10 group-hover:opacity-40 transition-opacity duration-500" />
+              
+              <div className="relative z-10">
               {/* Name */}
               <div className="mb-6">
-                <label className="text-sm mb-2 block" style={{ color: 'rgba(201,168,76,0.7)' }}>Full Name</label>
+                <label className="text-sm mb-2 block" style={{ color: '#8B6914', fontWeight: 500 }}>الاسم بالكامل</label>
                 <input type="text" value={form.name}
                   onChange={e => { setForm(f => ({ ...f, name: e.target.value })); setErrors(v => ({ ...v, name: '' })); }}
                   className="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all duration-300"
-                  style={{ background: 'rgba(201,168,76,0.05)', border: errors.name ? '1px solid rgba(200,50,50,0.5)' : '1px solid rgba(201,168,76,0.2)', color: '#F7E7CE' }}
-                  placeholder="Your full name"
+                  style={{ background: 'rgba(255,255,255,0.8)', border: errors.name ? '1px solid rgba(200,50,50,0.5)' : '1px solid rgba(201,168,76,0.3)', color: '#2C2C2C' }}
+                  placeholder="اكتب اسمك هنا"
                   onFocus={e => e.target.style.borderColor = 'rgba(201,168,76,0.6)'}
                   onBlur={e => e.target.style.borderColor = errors.name ? 'rgba(200,50,50,0.5)' : 'rgba(201,168,76,0.2)'}
                 />
@@ -152,15 +168,15 @@ const RSVP = () => {
 
               {/* Guests */}
               <div className="mb-6">
-                <label className="text-sm mb-2 block" style={{ color: 'rgba(201,168,76,0.7)' }}>Number of Guests (including yourself)</label>
+                <label className="text-sm mb-2 block" style={{ color: '#8B6914', fontWeight: 500 }}>عدد الحاضرين (شاملاً حضرتك)</label>
                 <select value={form.guests}
                   onChange={e => setForm(f => ({ ...f, guests: e.target.value }))}
                   className="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all duration-300 cursor-pointer"
-                  style={{ background: 'rgba(10,8,3,0.95)', border: '1px solid rgba(201,168,76,0.2)', color: '#F7E7CE' }}
+                  style={{ background: 'rgba(255,255,255,0.8)', border: '1px solid rgba(201,168,76,0.3)', color: '#2C2C2C' }}
                 >
                   {[1, 2, 3, 4, 5, 6].map(n => (
-                    <option key={n} value={n} style={{ background: '#0A0803' }}>
-                      {n === 1 ? '1 person (just me)' : `${n} people`}
+                    <option key={n} value={n} style={{ background: '#FFFFFF' }}>
+                      {n === 1 ? 'فرد واحد (أنا بس)' : `${n} أفراد`}
                     </option>
                   ))}
                 </select>
@@ -168,19 +184,19 @@ const RSVP = () => {
 
               {/* Attendance */}
               <div className="mb-6">
-                <label className="text-sm mb-3 block" style={{ color: 'rgba(201,168,76,0.7)' }}>Will you be able to attend?</label>
+                <label className="text-sm mb-3 block" style={{ color: '#8B6914', fontWeight: 500 }}>هتقدروا تنورونا؟</label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {[
-                    { value: 'yes', label: 'Yes, with all my love ❤️' },
-                    { value: 'no', label: 'Unfortunately, I cannot attend' },
+                    { value: 'yes', label: 'أكيد هنيجي بكل حب ❤️' },
+                    { value: 'no', label: 'للأسف مش هقدر أجي' },
                   ].map(opt => (
                     <button key={opt.value} type="button"
                       onClick={() => { setForm(f => ({ ...f, attendance: opt.value })); setErrors(v => ({ ...v, attendance: '' })); }}
-                      className="px-4 py-3 rounded-xl text-sm transition-all duration-300 cursor-pointer text-left"
+                      className="px-4 py-3 rounded-xl text-sm transition-all duration-300 cursor-pointer text-left font-medium"
                       style={{
-                        background: form.attendance === opt.value ? 'rgba(201,168,76,0.15)' : 'rgba(201,168,76,0.04)',
-                        border: form.attendance === opt.value ? '1px solid rgba(201,168,76,0.6)' : '1px solid rgba(201,168,76,0.15)',
-                        color: form.attendance === opt.value ? '#F0D98C' : 'rgba(247,231,206,0.6)',
+                        background: form.attendance === opt.value ? 'rgba(201,168,76,0.15)' : 'rgba(255,255,255,0.8)',
+                        border: form.attendance === opt.value ? '1px solid rgba(201,168,76,0.6)' : '1px solid rgba(201,168,76,0.3)',
+                        color: form.attendance === opt.value ? '#8B6914' : '#4A4A4A',
                       }}
                     >{opt.label}</button>
                   ))}
@@ -190,13 +206,13 @@ const RSVP = () => {
 
               {/* Optional message */}
               <div className="mb-8">
-                <label className="text-sm mb-2 block" style={{ color: 'rgba(201,168,76,0.7)' }}>Additional Message (optional)</label>
+                <label className="text-sm mb-2 block" style={{ color: '#8B6914', fontWeight: 500 }}>رسالة للعرسان (اختياري)</label>
                 <textarea value={form.message}
                   onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
                   rows={3}
                   className="w-full px-4 py-3 rounded-xl text-sm outline-none resize-none transition-all duration-300"
-                  style={{ background: 'rgba(201,168,76,0.05)', border: '1px solid rgba(201,168,76,0.2)', color: '#F7E7CE' }}
-                  placeholder="Any note you'd like to share..."
+                  style={{ background: 'rgba(255,255,255,0.8)', border: '1px solid rgba(201,168,76,0.3)', color: '#2C2C2C' }}
+                  placeholder="لو حابب تقول كلمة حلوة..."
                   onFocus={e => e.target.style.borderColor = 'rgba(201,168,76,0.6)'}
                   onBlur={e => e.target.style.borderColor = 'rgba(201,168,76,0.2)'}
                 />
@@ -204,8 +220,9 @@ const RSVP = () => {
 
               <motion.button type="submit" whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}
                 className="btn-gold w-full py-4 rounded-xl cursor-pointer text-base">
-                Confirm Attendance ✨
+                تأكيد الحضور ✨
               </motion.button>
+              </div>
             </motion.form>
           )}
         </AnimatePresence>
