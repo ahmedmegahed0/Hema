@@ -18,7 +18,7 @@ export const weddingData = {
     date: new Date('2026-09-30T21:00:00'),
     dateFormatted: 'الأربعاء، 30 سبتمبر 2026',
     time: '9:00 مساءً',
-    venue: 'قاعة سوليتاير — منوف، المنوفية',
+    venue: 'قاعة سوليتير — منوف، المنوفية',
     mapsUrl: 'https://maps.app.goo.gl/nDWtRY7esALqASew5',
   },
 
